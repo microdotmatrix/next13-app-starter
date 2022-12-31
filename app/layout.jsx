@@ -1,17 +1,23 @@
+// Load global stylesheet
 import '../styles/app.css'
 
+// Load Next.js components
 import Link from 'next/link'
-// Load context providers pre-loaded in server component
+
+// Load context providers into master server component
 import Providers from './providers'
 
+// Load functional components
 import Navigation from '../components/nav'
 import ThemeSwitch from '../components/dark-mode'
 import SocialMedia from '../components/social-media'
 import Counter from '../components/counter'
+
 // Load UI components
 import Icon from '../ui/icons'
 
-export default function RootLayout({ children }) {
+// Render global layout component
+export default function RootLayout({ children }, pageProps) {
   return (
     <html lang="en">
       {/*
@@ -37,7 +43,7 @@ export default function RootLayout({ children }) {
             </div>
           </header>
           <main>
-            <div className="container mx-auto">
+            <div className="mx-auto">
               {children}
             </div>
           </main>

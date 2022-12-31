@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:where(html) {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
 
+:where(html.light) {
+  color-scheme: light;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 234, 239, 220;
   --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
@@ -42,45 +45,43 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --c-text: #101010;
+  --c-background: #feffef;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+:where(html.dark) {
+  
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+  --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+  --secondary-glow: linear-gradient(
+    to bottom right,
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0.3)
+  );
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  --tile-start-rgb: 2, 13, 46;
+  --tile-end-rgb: 2, 5, 19;
+  --tile-border: conic-gradient(
+    #ffffff80,
+    #ffffff40,
+    #ffffff30,
+    #ffffff20,
+    #ffffff10,
+    #ffffff10,
+    #ffffff80
+  );
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
+  --callout-rgb: 20, 20, 20;
+  --callout-border-rgb: 108, 108, 108;
+  --card-rgb: 100, 100, 100;
+  --card-border-rgb: 200, 200, 200;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  --c-text: #feffef;
 }
 
 html,
@@ -90,18 +91,35 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+:where(html.light) body {
+  color-scheme: light;
+  color: var(--c-text);
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  transition: background 400ms ease, color 200ms ease;
+}
 
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+:where(html.dark) body {
+  color-scheme: dark;
+  color: var(--c-text);
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--tile-start-rgb))
+    )
+    rgb(var(--tile-end-rgb));
+  transition: background 400ms ease, color 200ms ease;
 }
 
 a {

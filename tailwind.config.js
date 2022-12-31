@@ -27,16 +27,9 @@ module.exports = {
     require('rippleui')
   ],
   rippleui: {
-    defaultStyle: false,
     themes: [{
       themeName: 'dark',
-      themeClass: 'dark',
-      colors: {
-        primary: '#1f2937',
-        secondary: '#4b5563',
-        backgroundPrimary: '#111827',
-        backgroundSecondary: '#374151',
-      }
+      themeClass: 'dark'
     }]
   }
 }

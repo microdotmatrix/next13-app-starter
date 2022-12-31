@@ -28,7 +28,7 @@ export default function RootLayout({ children }, pageProps) {
       <body>
         <Providers>
           <header className="py-8">
-            <div className="container mx-auto flex flex-row justify-between items-center">
+            <div className="container mx-auto flex flex-row justify-between items-center px-4">
               <section className="flex-auto">
                 <Link href="/">
                   <Icon icon="cib:next-js" size="4rem" />
@@ -48,16 +48,16 @@ export default function RootLayout({ children }, pageProps) {
             </div>
           </main>
           <footer className="py-12">
-            <div className="container mx-auto flex flex-row justify-between items-center">
-              <section className="flex-auto">
-                <span className="flex flex-row items-center gap-2">
-                  <Icon icon="mdi:copyright" size="1.25rem" inline={true} /> <span className='font-bold'>2022</span> <span>John Polinski</span>
-                </span>
-              </section>
+            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
               <section className='flex-auto'>
                 <Counter />
               </section>
-              <section className="flex-1 flex flex-row justify-end">
+              <section className="flex-1">
+                <span className="flex flex-row items-center justify-center gap-2 w-full">
+                  <Icon icon="mdi:copyright" size="1.25rem" inline={true} /> <span className='font-bold'>2022</span> <span>John Polinski</span>
+                </span>
+              </section>
+              <section className="flex-auto flex flex-row justify-end">
                 <SocialMedia />
               </section>
             </div>

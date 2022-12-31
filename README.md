@@ -1,3 +1,12 @@
+# Next.js 13 Starter Kit
+
+This repo is an adaptation of the Next.js boilerplate for version 13's experimental app directory using React Server Components. 
+My Starter Kit is equipped with some tools I find most useful for Next.js projects, particularly the ones I have found best
+suited for use in the new app directory structure with server-first component rendering.
+
+---
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

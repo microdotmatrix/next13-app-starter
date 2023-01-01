@@ -21,14 +21,14 @@ const Counter = () => {
   const hasMounted = useHasMounted()
   if (!hasMounted) return null
   return (
-    <div className="w-full mx-auto">
+    <div className="mx-auto w-fit border border-black">
       <h3 className="text-center">
         Count: <span className='font-bold'>{count}</span>
       </h3>
-      <div className='mx-auto flex flex-row btn-group btn-group-vertical lg:btn-group-horizontal'>
-        <button className="btn w-full lg:w-fit" onClick={decrement}>-1</button>
-        <button className="btn w-full lg:w-fit bg-border" onClick={reset}>Reset</button>
-        <button className="btn w-full lg:w-fit" onClick={increment}>+1</button>
+      <div className='mx-auto btn-group'>
+        <button className="btn" onClick={decrement}>-1</button>
+        <button className="btn bg-gray-300 dark:bg-gray-700" onClick={reset}>Reset</button>
+        <button className="btn" onClick={increment}>+1</button>
       </div>
     </div>
   )

@@ -1,0 +1,33 @@
+:where(html) {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-sans: var(--space-grotesk);
+  --font-body: var(--font-sans);
+  --font-heading: var(--lato);
+  --font-alt: var(--abel);
+
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+p {
+  margin: 2rem 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}

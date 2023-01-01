@@ -1,6 +1,9 @@
+import { Suspense } from 'react'
+import { BrickLoader } from '../../ui/loaders'
+
 export default function ContactPage() {
   return (
-    <>
+    <Suspense fallback={<BrickLoader />}>
       <div className="px-5 grid gap-8 grid-cols-1 md:grid-cols-2 py-24 mx-auto bg-gray-100 text-gray-900 rounded-lg">
         <div className="flex flex-col justify-center">
           <div>
@@ -74,6 +77,6 @@ export default function ContactPage() {
           </div>
         </form>
       </div>
-    </>
+    </Suspense>
   )
 }

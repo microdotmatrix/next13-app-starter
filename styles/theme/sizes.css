@@ -1,0 +1,4 @@
+:where(html) {
+  --max-width: 1400px;
+  --border-radius: 12px;
+}

@@ -23,13 +23,5 @@ module.exports = {
       },
     }
   },
-  plugins: [
-    require('rippleui')
-  ],
-  rippleui: {
-    themes: [{
-      themeName: 'dark',
-      themeClass: 'dark'
-    }]
-  }
+  plugins: [],
 }

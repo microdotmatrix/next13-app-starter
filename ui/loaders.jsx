@@ -4,9 +4,11 @@
 // SpinKit, sourced from https://tobiasahlin.com/spinkit/
 // ============================================================
 
+
+
 export const BrickLoader = () => {
   return (
-    <div className="sk-cube-grid">
+    <div className="sk-cube-grid w-32 h-32">
       <div className="sk-cube sk-cube1"></div>
       <div className="sk-cube sk-cube2"></div>
       <div className="sk-cube sk-cube3"></div>

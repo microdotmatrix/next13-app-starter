@@ -15,23 +15,24 @@ const ThemeSwitch = () => {
         <Icon
           icon="ph:sun-duotone"
           width="2rem"
-          className={clsx(theme === "light" ? "scale-125" : "scale-100")}
+          className={clsx(theme === "light" ? "scale-150" : "scale-100")}
           style={{ transition: "transform 300ms ease" }}
         />
       </button>
       <div className="themeID px-2">
         <Icon
           icon={theme === "light" ? "ph:lightbulb-duotone" : "ph:lightbulb"}
-          width="1.5rem"
-          color={theme === "light" ? "#d1ef9a" : "#222222"}
-          className="stroke-black"
+          width="1.25rem"
+          color={theme === "light" ? "#8dfb00" : "#aa00ff"}
+          className="stroke-gray-700 dark:stroke-gray-900"
           style={{
             filter:
               theme === "light"
                 ? "drop-shadow(0 0 2px #d1ef9a)"
-                : "drop-shadow(0 0 2px purple)",
+                : "drop-shadow(0 0 2px #aa00ff)",
             strokeWidth: "5px",
             transition: "all 500ms ease",
+            marginLeft: "2px"
           }}
         />
       </div>

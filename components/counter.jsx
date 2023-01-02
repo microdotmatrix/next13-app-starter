@@ -22,9 +22,9 @@ const Counter = () => {
   if (!hasMounted) return null
   return (
     <div className="mx-auto w-fit">
-      <h3 className="text-center">
+      <h5 className="text-center">
         Count: <span className='font-bold'>{count}</span>
-      </h3>
+      </h5>
       <div className='mx-auto btn-group'>
         <button className="btn" onClick={decrement}>-1</button>
         <button className="btn bg-gray-300 dark:bg-gray-700" onClick={reset}>Reset</button>

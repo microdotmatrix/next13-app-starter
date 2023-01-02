@@ -6,7 +6,7 @@ import { PageTransition } from '@components/container'
 
 export default function Home() {
   return (
-    <PageTransition>
+    <PageTransition width="content">
       <div className={styles.center}>
         <Image
           className={styles.logo}

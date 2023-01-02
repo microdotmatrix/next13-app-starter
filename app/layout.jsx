@@ -76,12 +76,12 @@ export default function RootLayout({ children }, pageProps) {
                 <section className='flex-none'>
                   <Counter />
                 </section>
-                <section className="flex-1">
+                <section className="flex-1 text-center">
                   <span className="flex flex-row items-center justify-center gap-2 w-full">
                     <Icon icon="mdi:copyright" size="1.25rem" inline={true} /> <span className='font-bold'>2022</span> <span>John Polinski</span>
                   </span>
                 </section>
-                <section className="flex-auto flex flex-row justify-end">
+                <section className="flex-none flex flex-row justify-end">
                   <SocialMedia />
                 </section>
               </div>

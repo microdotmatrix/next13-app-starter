@@ -36,7 +36,7 @@ export default async function BlogPage() {
   }
   return (
     <Suspense fallback={<BrickLoader />}>
-      <PageTransition>
+      <PageTransition width="full">
         {posts?.nodes.map((post, i) => (
           <div
             className="flex flex-row justify-between items-center gap-4 mb-8"

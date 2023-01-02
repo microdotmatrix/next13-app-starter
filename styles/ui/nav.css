@@ -14,14 +14,43 @@ div[role="desktop-navigation"] {
         margin: 0 1rem;
         a {
           padding: 0.5rem 1.5rem;
+          color: var(--c-text);
           background: rgba(33, 33, 33, 0.3);
           font-size: 1.25rem;
           font-family: var(--abel);
           letter-spacing: 0.1em;
           text-transform: uppercase;
           border-radius: 0.5rem;
+          display: flex;
+          position: relative;
+          z-index: 1;
+          transition: all 0.3s ease;
+          &:hover {
+            background: rgba(13, 233, 203, 0.65);
+            transform: scale(1.05);
+          }
+          &.active {
+            background: rgba(13, 233, 203, 1);
+          }
         }
+        
       }
     }
   }
+}
+
+.active-effect {
+  position: absolute;
+  left: 0;
+  top: 75%;
+  z-index: -1;
+  height: 25px;
+  width: 100%;
+  border-radius: 50%;
+  background: rgba(250, 33, 253, 0.35);
+  filter: blur(12px);
+}
+
+.dark .active-effect {
+  background: rgba(217, 16, 253, 0.35);
 }

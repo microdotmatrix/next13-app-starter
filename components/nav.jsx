@@ -1,8 +1,17 @@
 "use client"
 
 import clsx from 'clsx'
+import { usePathname } from "next/navigation"
 import NavLink from '../ui/nav-link'
 import NavToggle, { useMobileNav } from './mobile-nav'
+import { motion } from 'framer-motion'
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+]
 
 export default function Navigation() {
   return (
@@ -21,21 +30,20 @@ export default function Navigation() {
 
 export function NavItems({ align }) {
   const { navClose } = useMobileNav()
+  const path = usePathname()
   return (
     <nav className="nav-links">
       <ul className={clsx("flex", align === 'row' ? "flex-row" : "flex-col")}>
-        <li>
-          <NavLink href="/" onClick={navClose}>Home</NavLink>
-        </li>
-        <li>
-          <NavLink href="/blog" onClick={navClose}>Blog</NavLink>
-        </li>
-        <li>
-          <NavLink href="/about" onClick={navClose}>About</NavLink>
-        </li>
-        <li>
-          <NavLink href="/contact" onClick={navClose}>Contact</NavLink>
-        </li>
+        {navLinks.map(({ href, label }) => (
+          <li key={href}>
+            <NavLink href={href} onClick={navClose}>
+              {label}
+              {href === path && (
+                <motion.span layoutId="underline" className="active-effect" />
+              )}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   )

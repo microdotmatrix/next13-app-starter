@@ -2,10 +2,11 @@ import styles from './page.module.css'
 
 import Image from 'next/image'
 import BlurImage from '../ui/blur-image'
+import { PageTransition } from '@components/container'
 
 export default function Home() {
   return (
-    <>
+    <PageTransition>
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -29,6 +30,6 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nam animi earum, excepturi rem quis recusandae fugit totam corporis, sit delectus debitis minima voluptatibus distinctio quae qui et commodi impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias beatae, neque impedit incidunt suscipit! Quod iure deserunt iste placeat minima ab facere, repudiandae saepe quaerat provident fugiat mollitia maxime.
         </p>
       </div>
-    </>
+    </PageTransition>
   )
 }

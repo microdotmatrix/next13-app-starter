@@ -1,35 +1,38 @@
-export default async function Meta({ seo }) {
+export default async function Meta({ post }) {
   const {
     title,
-    description,
-    image,
-    metaTitle,
-    metaDescription,
-    ogTitle,
-    ogDescription,
-    ogImage,
-    twitterImage,
-    twitterTitle,
+    excerpt,
+    seo,
+    featuredImage
+  } = post;
+  const {
+    metaDesc,
+    opengraphDescription,
+    opengraphImage,
+    opengraphTitle,
     twitterDescription,
-  } = seo;
+    twitterImage,
+    twitterTitle
+  } = post.seo;
+  
   return (
     <>
-      <title>{metaTitle || title}</title>
+      <title>{title}</title>
   
-      <meta name='description' content={metaDescription || description} />
+      <meta name='description' content={metaDesc || excerpt} />
   
       { /* Open Graph */ }
       <meta property='og:site_name' content={title} />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content={ogTitle || metaTitle || title} />
-      <meta property='og:description' content={ogDescription || metaDescription || description} />
-      {ogImage || image && <meta property='og:image' content={ogImage || image} />}
+      <meta property='og:title' content={opengraphTitle ||  title} />
+      <meta property='og:description' content={opengraphDescription || metaDesc || excerpt} />
+      {opengraphImage || featuredImage && <meta property='og:image' content={opengraphImage || featuredImage.node.sourceUrl} />}
   
       { /* Twitter */ }
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content={twitterTitle || metaTitle || title} />
-      <meta name='twitter:description' content={twitterDescription || metaDescription || description} />
-      {ogImage || image && <meta name='twitter:image' content={twitterImage || image} />}
+      <meta name='twitter:title' content={twitterTitle || title} />
+      <meta name='twitter:description' content={twitterDescription || metaDesc || excerpt} />
+      {opengraphImage || featuredImage && <meta name='twitter:image' content={twitterImage || featuredImage.node.sourceUrl} />}
     </>
   )
 }

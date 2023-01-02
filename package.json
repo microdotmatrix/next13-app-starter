@@ -23,12 +23,15 @@
     "zustand": "^4.1.5"
   },
   "devDependencies": {
+    "@headlessui/react": "^1.7.7",
     "@iconify/react": "^4.0.1",
     "autoprefixer": "^10.4.13",
+    "framer-motion": "^8.0.2",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.0",
     "react-share": "^4.4.1",
+    "react-transition-group": "^4.4.5",
     "rippleui": "^1.4.0",
     "sharp": "^0.31.3",
     "tailwindcss": "^3.2.4"

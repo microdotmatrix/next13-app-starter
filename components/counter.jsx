@@ -21,7 +21,7 @@ const Counter = () => {
   const hasMounted = useHasMounted()
   if (!hasMounted) return null
   return (
-    <div className="mx-auto w-fit border border-black">
+    <div className="mx-auto w-fit">
       <h3 className="text-center">
         Count: <span className='font-bold'>{count}</span>
       </h3>

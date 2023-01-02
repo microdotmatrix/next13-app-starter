@@ -64,14 +64,12 @@ export default function RootLayout({ children }, pageProps) {
               </div>
             </header>
             <main>
-              <div className="mx-auto">
-                <Suspense fallback={"Loading content..."}>
-                  {children}
-                </Suspense>
-              </div>
+              <Suspense fallback={"Loading content..."}>
+                {children}
+              </Suspense>
             </main>
             <footer className="py-12">
-              <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+              <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                 <section className='flex-none'>
                   <Counter />
                 </section>

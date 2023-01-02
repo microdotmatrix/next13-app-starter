@@ -28,7 +28,7 @@ export default async function PostLayout({ children, params }) {
   return (
     <>
       <header className="w-full h-80 bg-no-repeat bg-cover bg-fixed" style={{ backgroundImage: `url(${postImage})` }}>
-        <h1 className="text-6xl">{post.title}</h1>
+        <h1 className="title">{post.title}</h1>
       </header>
       <article className="flex flex-col">
         {children}

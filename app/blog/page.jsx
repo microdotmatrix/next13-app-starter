@@ -7,7 +7,7 @@ import { BrickLoader } from "@ui/loaders";
 import { GET_POSTS } from "@lib/queries/posts";
 
 import { formatDate } from "@utils/helpers";
-import { PageTransition } from "@components/container";
+import { PageContent } from "@components/container";
 
 export async function fetchPosts() {
   try {
@@ -36,7 +36,7 @@ export default async function BlogPage() {
   }
   return (
     <Suspense fallback={<BrickLoader />}>
-      <PageTransition width="full">
+      <PageContent width="full">
         {posts?.nodes.map((post, i) => (
           <div
             className="flex flex-row justify-between items-center gap-4 mb-8"
@@ -79,7 +79,7 @@ export default async function BlogPage() {
             </div>
           </div>
         ))}
-      </PageTransition>
+      </PageContent>
     </Suspense>
   );
 }

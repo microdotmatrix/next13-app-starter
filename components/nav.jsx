@@ -4,13 +4,13 @@ import clsx from 'clsx'
 import { usePathname } from "next/navigation"
 import NavLink from '../ui/nav-link'
 import NavToggle, { useMobileNav } from './mobile-nav'
-import { motion } from 'framer-motion'
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/shop', label: 'Shop'}
 ]
 
 export default function Navigation() {

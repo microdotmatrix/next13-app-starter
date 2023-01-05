@@ -12,7 +12,7 @@ export default async function Meta({ post }) {
     twitterDescription,
     twitterImage,
     twitterTitle
-  } = post.seo;
+  } = seo;
   
   return (
     <>

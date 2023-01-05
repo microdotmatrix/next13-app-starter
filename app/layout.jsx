@@ -8,7 +8,6 @@ import { Space_Grotesk, Lato, Abel } from '@next/font/google'
 
 // Load context providers into master server component
 import Providers from './providers'
-import RootLayoutClient from './layout.client'
 
 // Load functional components
 import Navigation from '../components/nav'
@@ -66,9 +65,7 @@ export default function RootLayout({ children }, pageProps) {
             </header>
             <main>
               <Suspense fallback={"Loading content..."}>
-                <RootLayoutClient>
-                  {children}
-                </RootLayoutClient>
+                {children}
               </Suspense>
             </main>
             <footer className="site-footer">

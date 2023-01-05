@@ -7,9 +7,9 @@ export default function RootContextProvider({ children }, pageProps) {
   const createStore = useCreateStore(pageProps.initState)
   return (
     <Provider createStore={createStore}>
-      <UiContextProvider>
+      
         {children}
-      </UiContextProvider>
+      
     </Provider>
   )
 }

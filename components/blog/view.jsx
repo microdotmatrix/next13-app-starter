@@ -25,6 +25,7 @@ export default async function PostView({ post }) {
           width={postImage ? postImage.node.mediaDetails.width : 1920}
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUVzfcDwACHAE4n99SSwAAAABJRU5ErkJggg=="
+          quality={75}
         />
       </header>
       <article className="flex flex-col max-w-screen-lg mx-auto pt-8">

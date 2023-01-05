@@ -3,7 +3,6 @@ export default async function Meta({ post }) {
     title,
     excerpt,
     seo,
-    featuredImage
   } = post;
   const {
     metaDesc,
@@ -26,13 +25,13 @@ export default async function Meta({ post }) {
       <meta property='og:type' content='website' />
       <meta property='og:title' content={opengraphTitle ||  title} />
       <meta property='og:description' content={opengraphDescription || metaDesc || excerpt} />
-      {opengraphImage || featuredImage && <meta property='og:image' content={opengraphImage || featuredImage.node.sourceUrl} />}
+      {opengraphImage && <meta property='og:image' content={opengraphImage} />}
   
       { /* Twitter */ }
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:title' content={twitterTitle || title} />
       <meta name='twitter:description' content={twitterDescription || metaDesc || excerpt} />
-      {opengraphImage || featuredImage && <meta name='twitter:image' content={twitterImage || featuredImage.node.sourceUrl} />}
+      {twitterImage && <meta name='twitter:image' content={twitterImage} />}
     </>
   )
 }

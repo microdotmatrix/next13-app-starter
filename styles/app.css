@@ -9,6 +9,8 @@
 @import './ui/buttons.css';
 @import './ui/nav.css';
 
+@import "./lib/wp.css";
+
 main {
   display: flex;
   flex-direction: column;

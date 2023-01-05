@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function NavLink({ href, children }) {
   const activePath = usePathname();
   return (
-    <Link href={href} className={activePath == `${href}` ? "active" : null}>
+    <Link href={href} className={activePath == href ? "active" : null}>
       {children}
     </Link>
   );

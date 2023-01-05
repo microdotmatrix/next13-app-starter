@@ -22,7 +22,7 @@ const Counter = () => {
   if (!hasMounted) return null
   return (
     <div className="mx-auto w-fit">
-      <h5 className="text-center">
+      <h5 className="text-center mb-1">
         Count: <span className='font-bold'>{count}</span>
       </h5>
       <div className='mx-auto btn-group'>

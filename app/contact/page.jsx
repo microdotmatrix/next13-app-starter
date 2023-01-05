@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import Link from 'next/link'
 import { BrickLoader } from '../../ui/loaders'
 import { PageTransition } from '@components/container'
 
@@ -9,16 +10,12 @@ export default function ContactPage() {
         <div className="px-5 grid gap-8 grid-cols-1 md:grid-cols-2 py-24 mx-auto bg-gray-100 text-gray-900 rounded-lg">
           <div className="flex flex-col justify-center">
             <div>
-              <h1 className="text-5xl font-bold mb-8">Contact Page</h1>
-              <h2 className="text-2xl lg:text-3xl font-semibold leading-tight">
+              <h1 className="text-5xl font-bold mb-2">Contact Page</h1>
+              <h2 className="text-xl lg:text-2xl font-semibold leading-tight text-gray-400 mt-2">
                 Get in touch with me
               </h2>
               <div className="text-gray-700 mt-8">
-                Hate forms? Send us an&nbsp;
-                <a className="underline" href="mailto:someone@gmail.com">
-                  email
-                </a>
-                instead.
+                Hate forms? Send us an <Link className="underline" href="mailto:someone@gmail.com">email</Link> instead.
               </div>
             </div>
             <div className="mt-12 text-center">

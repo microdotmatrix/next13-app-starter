@@ -35,12 +35,9 @@ export function NavItems({ align }) {
     <nav className="nav-links">
       <ul className={clsx("flex", align === 'row' ? "flex-row" : "flex-col")}>
         {navLinks.map(({ href, label }) => (
-          <li key={href}>
+          <li key={href} className={clsx("nav-btn", href === path ? "active-effect" : "inactive")}>
             <NavLink href={href} onClick={navClose}>
               {label}
-              {href === path && (
-                <motion.span layoutId="underline" className="active-effect" />
-              )}
             </NavLink>
           </li>
         ))}

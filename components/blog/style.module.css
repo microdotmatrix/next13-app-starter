@@ -1,0 +1,33 @@
+.postHero {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(var(--c-fade-start) 5%, var(--c-fade-end));
+    z-index: 1;
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.title {
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  margin-top: 0;
+}

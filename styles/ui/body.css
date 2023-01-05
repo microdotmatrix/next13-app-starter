@@ -21,27 +21,52 @@ body {
 :where(html.light) body {
   color-scheme: light;
   color: var(--c-text);
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background: var(--c-fade-start);
   transition: background 400ms ease, color 200ms ease;
 }
 
 :where(html.dark) body {
   color-scheme: dark;
   color: var(--c-text);
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--tile-start-rgb))
     )
-    rgb(var(--tile-end-rgb));
+    rgb(var(--tile-end-rgb)); */
+  background: linear-gradient(to bottom, var(--c-fade-start), rgb(var(--tile-end-rgb)));
+  background-attachment: fixed;
   transition: background 400ms ease, color 200ms ease;
 }
 
 .content-width {
   max-width: var(--max-width);
+}
+
+.site-header {
+  background: var(--c-fade-start);
+  padding: 2rem 5vw;
+}
+
+.site-footer {
+  padding: 2rem 5vw 6rem;
+}
+
+.postHero {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(var(--c-fade-start) 5%, var(--c-fade-end));
+    z-index: 1;
+  }
 }

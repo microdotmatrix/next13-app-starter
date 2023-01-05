@@ -16,7 +16,6 @@ export default function RootContextProvider({ children }, pageProps) {
 
 export async function getServerProps() {
   const initStore = initializeStore()
-  const posts = await fetchPosts()
   return {
     props: {
       // the "stringify and then parse again" piece is required as next.js

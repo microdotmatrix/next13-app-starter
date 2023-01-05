@@ -1,47 +1,46 @@
-@layer components {
+.btn {
+  display: inline-flex;
+  padding: 0.5rem 1.25rem;
+  background: rgba(33, 33, 33, 0.3);
+  color: var(--c-btn-text);
+  font-family: var(--lato);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: background 200ms ease;
+  &:hover {
+    background: rgba(33, 33, 33, 0.5);
+  }
+}
+:where(.dark) {
   .btn {
-    display: inline-flex;
-    padding: 0.5rem 1.25rem;
-    background: rgba(33, 33, 33, 0.3);
-    font-family: var(--lato);
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    border-radius: 0.5rem;
-    transition: background 200ms ease;
+    background: rgba(255, 255, 255, 0.3);
     &:hover {
-      background: rgba(33, 33, 33, 0.5);
+      background: rgba(255, 255, 255, 0.5);
     }
   }
-  :where(.dark) {
-    .btn {
-      background: rgba(255, 255, 255, 0.3);
-      &:hover {
-        background: rgba(255, 255, 255, 0.5);
-      }
-    }
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  .btn-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .btn {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    .btn:first-child {
-      border-top-left-radius: 0.5rem;
-      border-bottom-left-radius: 0.5rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    .btn:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
-    }
+  .btn:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
 }

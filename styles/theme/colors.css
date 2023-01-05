@@ -35,7 +35,13 @@
   --card-border-rgb: 131, 134, 135;
 
   --c-text: #101010;
-  --c-background: #feffef;
+  --c-background: rgba(249, 255, 245, 1);
+  --c-active: rgba(225, 250, 255, 1);
+  --c-active-border: rgba(10, 10, 13, 0.25);
+  --c-btn-text: #001001;
+
+  --c-fade-start: var(--c-background);
+  --c-fade-end: rgba(249, 255, 245, 0);
 }
 
 :where(html.dark) {
@@ -71,4 +77,9 @@
 
   --c-text: #feffef;
   --c-background: #011011;
+  --c-active-border: rgba(225, 250, 255, 0.25);
+  --c-btn-text: #f1ffff;
+
+  --c-fade-start: var(--c-background);
+  --c-fade-end: rgba(0, 0, 0, 0);
 }

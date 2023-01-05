@@ -49,7 +49,7 @@ export default function RootLayout({ children }, pageProps) {
       <body>
         <Providers>
           <Suspense fallback={"Loading..."}>
-            <header className="py-8">
+            <header className="site-header">
               <div className="container mx-auto flex flex-row justify-between items-center px-4">
                 <section style={{ flex: '2 0 0' }}>
                   <Link href="/">
@@ -71,12 +71,12 @@ export default function RootLayout({ children }, pageProps) {
                 </RootLayoutClient>
               </Suspense>
             </main>
-            <footer className="py-12">
-              <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <footer className="site-footer">
+              <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center divide-y lg:divide-y-0">
                 <section className='flex-none'>
                   <Counter />
                 </section>
-                <section className="flex-1 text-center">
+                <section className="flex-1 text-center py-4 lg:py-0">
                   <span className="flex flex-row items-center justify-center gap-2 w-full">
                     <Icon icon="mdi:copyright" size="1.25rem" inline={true} /> <span className='font-bold'>2022</span> <span>John Polinski</span>
                   </span>

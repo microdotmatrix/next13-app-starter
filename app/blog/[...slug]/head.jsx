@@ -1,5 +1,8 @@
-import Meta from '@components/meta'
+import { NextSeo } from 'next-seo'
 import { GET_POST_SEO } from '@lib/queries/posts'
+
+import MetaTags from '@components/meta'
+import { meta } from '@lib/config'
 
 async function fetchSeo(slug) {
   try {
@@ -25,7 +28,16 @@ async function fetchSeo(slug) {
 export default async function Head({ params }) {
   let slug = params.slug.toString()
   const post = await fetchSeo(slug)
+  const updateMeta = {
+    ...meta,
+    title: post?.title,
+    description: post?.description,
+    titleTemplate: `%s | ${meta.title}`,
+  }
   return (
-    <Meta post={post} />
+    <>
+      <MetaTags />
+      <NextSeo {...updateMeta} useAppDir={true} />
+    </>
   )
 }
